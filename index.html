@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netflix(JeongChaeLin)</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #111;
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+
+    .header {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .netflix-logo {
+      position: absolute;
+      top: 20px;
+      left: 25px;
+      z-index: 1;
+    }
+
+    .netflix-logo img {
+      height: 40px;
+    }
+
+    .profile-container {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+    }
+
+    .profile-img {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .header-content {
+      position: absolute;
+      bottom: 10px;
+      left: 40px;
+      text-align: left;
+      z-index: 1;
+      color: white;
+      padding: 50px;
+    }
+
+
+    .header h1 {
+      font-size: 5rem;
+      margin-bottom: 15px;
+    }
+
+    .header .buttons button {
+      margin-right: 10px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: rgba(255, 255, 255, 0.3);
+      border: none;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .buttons button {
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border: none;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+      gap: 8px;
+    }
+
+    .buttons button img {
+      width: 20px;
+      height: 20px;
+    }
+
+
+    .section-title {
+      font-size: 1.5rem;
+      margin: 20px 50px 10px;
+    }
+
+    .movie-container {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      padding: 10px 50px;
+    }
+
+    .movie-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    .movie {
+      flex: 0 0 auto;
+      width: 150px;
+      transition: transform 0.3s;
+    }
+
+    .movie:hover {
+      transform: scale(1.2);
+      z-index: 2;
+    }
+
+    .movie img {
+      width: 100%;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <video autoplay muted loop class="bg-video">
+      <source src="space2.mp4" type="video/mp4" />
+    </video>
+
+    <div class="netflix-logo">
+      <img src="NETFLIX_Logo.png" alt="Netflix Logo">
+    </div>
+
+    <div class="profile-container">
+      <img src="profile.png" alt="Profile Image" class="profile-img">
+    </div>
+
+    <div class="header-content">
+      <h1>I.S.S</h1>
+      <div class="buttons">
+        <button class="play-button">
+          <img src="play.png" alt="Play Icon">재생
+        </button>
+        <button class="info-button">
+          <img src="info.png" alt="Info Icon">상세 정보
+        </button>
+      </div>
+      <p>에너지 문제를 해결하기 위해 첨단 디바이스를 시험하던 우주정거장의 과학자들.<br> 임무를 진행하면서 ISS(국제우주정거장)의 숨겨진 진실과 마주하게 되는데...</p>
+    </div>
+  </div>
+
+  <div class="section-title">NETFLIX ORIGINALS</div>
+  <div class="movie-container">
+    <div class="movie"><img src="1.png" alt="파묘"></div>
+    <div class="movie"><img src="3.png" alt="parasite"></div>
+    <div class="movie"><img src="18.png" alt="극한직업"></div>
+    <div class="movie"><img src="20.png" alt="서울의봄"></div>
+    <div class="movie"><img src="17.png" alt="곡성"></div>
+    <div class="movie"><img src="21.png" alt="1987"></div>
+    <div class="movie"><img src="27.png" alt="화려한 휴가"></div>
+    <div class="movie"><img src="28.jpg" alt="26년"></div>
+  </div>
+
+  <div class="section-title">Trending Now</div>
+  <div class="movie-container">
+    <div class="movie"><img src="12.png" alt="Inception">
+    </div>
+    <div class="movie"><img src="6.jpg" alt="Thelma and Louise"></div>
+    <div class="movie"><img src="25.png" alt="AboutTime"></div>
+    <div class="movie"><img src="26.jpg" alt="Notting Hill"></div>
+    <div class="movie"><img src="19.jpg" alt="Aladdin"></div>
+    <div class="movie"><img src="2.jpg" alt="LaLaLand"></div>
+    <div class="movie"><img src="11.jpg" alt="The Help"></div>
+    <div class="movie"><img src="14.jpg" alt="Pinocchio"></div>
+  </div>
+</body>
+
+</html>
